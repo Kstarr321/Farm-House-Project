@@ -8,7 +8,10 @@
     <%=f.label :Acres%>
     <%=f.number_field :acres%>
 
-
+    <br>
+    Select Workers to Hire or Deselect Workers to Fire: <br>
+    <%= f.collection_check_boxes :worker_ids, Worker.all, :id, :name  %>
+    <br>
 
 
     <%=f.submit "Edit Farm"%>
