@@ -2,6 +2,11 @@
 
 <h3>Experience: <%=@worker.yrs_experience%></h3>
 <br>
+<h3>Farms Working For: <ul> <%@worker.farms.each do |farm| %>
+    <li><%= link_to farm.name, farm_path(farm) %></li>
+    <%end%>
+    </ul>
+<br>
 
 <%=link_to "Worker Index Page", workers_path%>
 <br> 

@@ -9,6 +9,7 @@ class FarmsController < ApplicationController
 
     def new
         @farm = Farm.new
+        @farm.workers.build()
     end 
 
     def create 
@@ -27,7 +28,8 @@ class FarmsController < ApplicationController
     end 
 
     def destroy
-
+        Farm.destroy(params[:id])
+        redirect_to farms_path
     end 
 
 
@@ -35,7 +37,7 @@ class FarmsController < ApplicationController
 private 
 
 def farm_params 
-    params.require(:farm).permit(:name, :farm_type, :acres)
+    params.require(:farm).permit(:name, :farm_type, :acres, workers_attributes: [:name, :yrs_experience])
 end 
 
 

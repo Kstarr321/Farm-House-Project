@@ -4,7 +4,11 @@
 
     <%=w.label :Years_of_Experience%>
     <%=w.number_field :yrs_experience%>
+    <br>
+    Select Farms To Work For: <br>
+    <%= w.collection_check_boxes :farm_ids, Farm.all, :id, :name  %>
 
+<br>
 
 
 

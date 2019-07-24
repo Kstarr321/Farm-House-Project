@@ -37,7 +37,7 @@ class WorkersController < ApplicationController
 private 
 
 def worker_params 
-    params.require(:worker).permit(:name, :yrs_experience)
+    params.require(:worker).permit(:name, :yrs_experience, farm_ids:[])
 end 
 
 

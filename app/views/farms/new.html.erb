@@ -3,13 +3,19 @@
     <%=f.text_field :name%> <br>
 
     <%=f.label :Type_of_Farm%>
-    <%=f.text_field :farm_type%>
+    <%=f.text_field :farm_type%> <br>
 
     <%=f.label :Acres%>
-    <%=f.number_field :acres%>
+    <%=f.number_field :acres%> <br>
+            Create Worker: <br>
+        <%= f.fields_for :workers do |w| %>
+                <%=w.label :name%>
+                <%=w.text_field :name%> <br>
+            
+                <%=w.label :Years_of_Experience%>
+                <%=w.number_field :yrs_experience%>
 
-
-
+        <%end%>
 
     <%=f.submit "Build New Farm"%>
 <%end%>
