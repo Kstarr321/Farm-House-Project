@@ -1,0 +1,12 @@
+<h1><%=@worker.name%></h1>
+
+<h3>Experience: <%=@worker.yrs_experience%></h3>
+<br>
+
+<%=link_to "Worker Index Page", workers_path%>
+<br> 
+
+<%=link_to "Edit this Worker", edit_worker_path(@worker)%>
+<br>
+
+<%=link_to "Terminate Employment", worker_path(@worker), 'method' => :delete %>

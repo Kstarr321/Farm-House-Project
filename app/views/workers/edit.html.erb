@@ -1,0 +1,12 @@
+<%= form_for @worker do |w|%>
+    <%=w.label :name%>
+    <%=w.text_field :name%> <br>
+
+    <%=w.label :Years_of_Experience%>
+    <%=w.number_field :yrs_experience%>
+
+
+
+
+    <%=w.submit "Update Worker"%>
+<%end%>

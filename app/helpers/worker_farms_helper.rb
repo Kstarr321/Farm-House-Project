@@ -1,0 +1,2 @@
+module WorkerFarmsHelper
+end

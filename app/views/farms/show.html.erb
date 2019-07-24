@@ -1,0 +1,8 @@
+<h1><%=@farm.name%></h1>
+
+<h3>Farm Type: <%=@farm.farm_type%></h3>
+<h3>Acres: <%=@farm.acres%></h3>
+<br>
+
+<%=link_to "Farm Index Page", farms_path%> <br>
+<%=link_to "Edit this Farm", edit_farm_path(@farm)%>

@@ -1,0 +1,15 @@
+<%= form_for @farm do |f|%>
+    <%=f.label :name%>
+    <%=f.text_field :name%> <br>
+
+    <%=f.label :Type_of_Farm%>
+    <%=f.text_field :farm_type%>
+
+    <%=f.label :Acres%>
+    <%=f.number_field :acres%>
+
+
+
+
+    <%=f.submit "Edit Farm"%>
+<%end%>
